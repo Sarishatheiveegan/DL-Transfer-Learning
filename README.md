@@ -32,9 +32,9 @@ Evaluate the model with test accuracy, confusion matrix, classification report, 
 
 ## PROGRAM
 
-### Name: PRIYADHARSHINI S
+### Name: MARINO SARISHA T 
 
-### Register Number: 212223240129
+### Register Number: 212223240084
 
 ```python
 import torch
