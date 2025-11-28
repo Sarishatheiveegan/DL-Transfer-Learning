@@ -54,17 +54,8 @@ transform = transforms.Compose([
     transforms.ToTensor()
 ])
 
-import zipfile
-import os
 
-zip_path = r"C:\Users\admin\Documents\DEEP\chip_data.zip"  
-extract_path = r"C:\Users\admin\Documents\DEEP\chip_data\dataset"    
-
-with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall(extract_path)
-
-print("Extraction complete!")
-print(os.listdir(extract_path))
+!unzip -qq ./chip_data.zip -d data
 
 dataset_path = r"C:\Users\admin\Documents\DEEP\chip_data\dataset"
 train_dataset = datasets.ImageFolder(root=f"{dataset_path}/train", transform=transform)
@@ -191,8 +182,6 @@ def test_model(model, test_loader):
     plt.title('Confusion Matrix')
     plt.show()
 
-    print("Name: Priyadharshini S")
-    print("Register Number: 212223240129")
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=train_dataset.classes))
 
